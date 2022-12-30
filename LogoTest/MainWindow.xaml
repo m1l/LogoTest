@@ -1,0 +1,658 @@
+﻿<Window
+    x:Class="LogoTest.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:PresentationOptions="http://schemas.microsoft.com/winfx/2006/xaml/presentation/options"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:LogoTest"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="MainWindow"
+    Width="405"
+    Height="450"
+    Background="#eeeeee"
+    SnapsToDevicePixels="True"
+    UseLayoutRounding="True"
+    mc:Ignorable="d">
+    <Grid>
+        <!--<Border Background="#e0edf8"/>-->
+
+        <StackPanel Orientation="Vertical">
+            <StackPanel Margin="5" Orientation="Horizontal">
+                <Button Click="Light10_Click" Content="Light 10" />
+                <Button Click="Dark10_Click" Content="Dark 10" />
+                <Button Click="Light11_Click" Content="Light 11" />
+            </StackPanel>
+            <StackPanel Margin="5" Orientation="Horizontal">
+                <Button Click="Size16_Click" Content="16" />
+                <Button Click="Size32_Click" Content="32" />
+                <Button Click="Size64_Click" Content="64" />
+                <Button Click="Size128_Click" Content="128" />
+                <!--<Button Click="Save_Click" Content="Save" />-->
+            </StackPanel>
+            <TextBlock Margin="5,0,0,0" Text="Hover to see the number" />
+        </StackPanel>
+        <ScrollViewer Margin="0,80,0,0" HorizontalScrollBarVisibility="Disabled">
+            <StackPanel Margin="0,0,128,128" Orientation="Vertical">
+
+                <WrapPanel
+                    x:Name="wpanel"
+                    Margin="5,5,5,5"
+                    Orientation="Horizontal">
+
+                    <local:LogoUC Margin="5" ShadowStength="2">
+                        <local:LogoUC.FolderBackBrush>
+                            <LinearGradientBrush StartPoint=".5,0" EndPoint="1,1">
+                                <GradientStop Offset="0" Color="#FF4EB4F0" />
+                                <!--<GradientStop Offset="0.2" Color="#74b0e3"/>
+                        <GradientStop Offset="0.8" Color="#3e5ba5"/>-->
+                                <GradientStop Offset=".6" Color="#FF0F79B9" />
+                                <GradientStop Offset="1" Color="#FF195585" />
+                            </LinearGradientBrush>
+                        </local:LogoUC.FolderBackBrush>
+                        <local:LogoUC.OneBrush>
+                            <LinearGradientBrush StartPoint="1,0" EndPoint="1,1">
+                                <GradientStop Offset="0" Color="#FF40B6EA" />
+                                <GradientStop Offset=".4" Color="#4ae9ff" />
+                                <GradientStop Offset=".6" Color="#4ae9ff" />
+                                <GradientStop Offset="1" Color="#FF40B6EA" />
+
+                            </LinearGradientBrush>
+                        </local:LogoUC.OneBrush>
+
+                        <local:LogoUC.OneBrushBorder>
+                            <LinearGradientBrush StartPoint="0,1" EndPoint="0,0">
+                                <GradientStop Offset="0" Color="#FF20DAFF" />
+                                <GradientStop Offset="1" Color="#FF61E5FF" />
+                            </LinearGradientBrush>
+                        </local:LogoUC.OneBrushBorder>
+                    </local:LogoUC>
+                    <local:LogoUC Margin="5">
+                        <local:LogoUC.FolderBackBrush>
+                            <LinearGradientBrush StartPoint=".8,0" EndPoint="1,1">
+                                <GradientStop Offset="0" Color="#FF39B4F4" />
+                                <GradientStop Offset="1" Color="#165bac" />
+                            </LinearGradientBrush>
+                        </local:LogoUC.FolderBackBrush>
+                        <local:LogoUC.OneBrush>
+                            <LinearGradientBrush StartPoint="1,0" EndPoint=".95,1">
+                                <GradientStop Offset="0" Color="#FF58DEFF" />
+                                <GradientStop Offset="1" Color="#FF30B1EA" />
+                            </LinearGradientBrush>
+                        </local:LogoUC.OneBrush>
+                    </local:LogoUC>
+
+                    <local:LogoUC Margin="5">
+                        <local:LogoUC.FolderBackBrush>
+                            <LinearGradientBrush StartPoint=".5,0" EndPoint="1,1">
+                                <GradientStop Offset="0" Color="#FF4EB4F0" />
+                                <!--<GradientStop Offset="0.2" Color="#74b0e3"/>
+                        <GradientStop Offset="0.8" Color="#3e5ba5"/>-->
+                                <GradientStop Offset=".6" Color="#FF0F79B9" />
+                                <GradientStop Offset="1" Color="#FF195585" />
+                            </LinearGradientBrush>
+                        </local:LogoUC.FolderBackBrush>
+                        <local:LogoUC.OneBrush>
+                            <LinearGradientBrush StartPoint="0.2,0" EndPoint="0,1">
+                                <GradientStop Offset="0" Color="#FF61E5FF" />
+                                <GradientStop Offset="1" Color="#FF1F9ADA" />
+                            </LinearGradientBrush>
+                        </local:LogoUC.OneBrush>
+
+                        <local:LogoUC.OneBrushBorder>
+                            <LinearGradientBrush StartPoint="0,1" EndPoint="0,0">
+                                <GradientStop Offset="0" Color="#FF20DAFF" />
+                                <GradientStop Offset="1" Color="#47c1ff" />
+                            </LinearGradientBrush>
+                        </local:LogoUC.OneBrushBorder>
+                    </local:LogoUC>
+                    <local:LogoUC Margin="5">
+                        <local:LogoUC.FolderBackBrush>
+                            <RadialGradientBrush Center=".5,.15" GradientOrigin="0,0" RadiusX="1.5" RadiusY=".9">
+
+                                <GradientStop Offset="0" Color="#2daee3" />
+                                <GradientStop Offset="1" Color="#0e58a3" />
+                                <!--<GradientStop Offset="0" Color="#ffffff"/>
+                            <GradientStop Offset="1" Color="#000000"/>-->
+                            </RadialGradientBrush>
+                        </local:LogoUC.FolderBackBrush>
+                        <local:LogoUC.OneBrush>
+                            <RadialGradientBrush Center="0,.6" GradientOrigin="1,.05" RadiusX="1.1" RadiusY="1">
+
+                                <GradientStop Offset="1" Color="#FF00D6FF" />
+                                <GradientStop Offset="0" Color="#4ae9ff" />
+                                <!--<GradientStop Offset="0" Color="#ffffff"/>
+                            <GradientStop Offset="1" Color="#000000"/>-->
+                            </RadialGradientBrush>
+
+                        </local:LogoUC.OneBrush>
+                    </local:LogoUC>
+
+                    <local:LogoUC
+                        x:Name="imageToSave"
+                        Margin="5"
+                        ShadowStength="1">
+                        <local:LogoUC.FolderBackBrush>
+                            <LinearGradientBrush StartPoint="0,0" EndPoint=".4,1">
+                                <GradientStop Offset="0" Color="#FF2BC8FF" />
+                                <!--<GradientStop Offset="0.2" Color="#74b0e3"/>
+                        <GradientStop Offset="0.8" Color="#3e5ba5"/>-->
+
+                                <GradientStop Offset="1" Color="#FF0F5AA2" />
+                            </LinearGradientBrush>
+                        </local:LogoUC.FolderBackBrush>
+                        <local:LogoUC.OneBrush>
+                            <LinearGradientBrush StartPoint="1,0.0" EndPoint=".6,.3">
+                                <GradientStop Offset="0" Color="#9cecfc" />
+                                <GradientStop Offset="1" Color="#4ae9ff" />
+                            </LinearGradientBrush>
+                        </local:LogoUC.OneBrush>
+
+                        <local:LogoUC.OneBrushBorder>
+                            <LinearGradientBrush StartPoint="0,1" EndPoint="0,0">
+                                <GradientStop Offset="0" Color="#FF2BC8FF" />
+                                <GradientStop Offset="1" Color="#FF61D6FF" />
+                            </LinearGradientBrush>
+                        </local:LogoUC.OneBrushBorder>
+                    </local:LogoUC>
+
+                    <local:LogoUC Margin="5" ShadowStength="1">
+                        <local:LogoUC.FolderBackBrush>
+                            <LinearGradientBrush StartPoint="0,0" EndPoint=".4,1">
+                                <GradientStop Offset="0" Color="#FF2BC8FF" />
+                                <!--<GradientStop Offset="0.2" Color="#74b0e3"/>
+                        <GradientStop Offset="0.8" Color="#3e5ba5"/>-->
+
+                                <GradientStop Offset="1" Color="#FF0F5AA2" />
+                            </LinearGradientBrush>
+                        </local:LogoUC.FolderBackBrush>
+                        <local:LogoUC.OneBrush>
+                            <LinearGradientBrush StartPoint="1,0" EndPoint="1,1">
+                                <GradientStop Offset="0" Color="#FF74EEFF" />
+                                <GradientStop Offset="1" Color="#FF6BD9FF" />
+                            </LinearGradientBrush>
+                        </local:LogoUC.OneBrush>
+
+                        <local:LogoUC.OneBrushBorder>
+                            <LinearGradientBrush StartPoint="0,1" EndPoint="0,0">
+                                <GradientStop Offset="0" Color="#FF74EEFF" />
+                                <GradientStop Offset="1" Color="#FF6BD9FF" />
+                            </LinearGradientBrush>
+                        </local:LogoUC.OneBrushBorder>
+                    </local:LogoUC>
+
+                    <local:LogoUC Margin="5" ShadowStength="1">
+                        <local:LogoUC.FolderBackBrush>
+                            <LinearGradientBrush StartPoint="0,0" EndPoint=".4,1">
+                                <GradientStop Offset="0" Color="#FF2BC8FF" />
+                                <!--<GradientStop Offset="0.2" Color="#74b0e3"/>
+                        <GradientStop Offset="0.8" Color="#3e5ba5"/>-->
+
+                                <GradientStop Offset="1" Color="#FF0F5AA2" />
+                            </LinearGradientBrush>
+                        </local:LogoUC.FolderBackBrush>
+                        <local:LogoUC.OneBrush>
+                            <LinearGradientBrush StartPoint="1,0" EndPoint="1,1">
+                                <GradientStop Offset="0" Color="#43d8fb" />
+                                <GradientStop Offset="1" Color="#FF16D9F4" />
+                            </LinearGradientBrush>
+
+                        </local:LogoUC.OneBrush>
+
+                        <local:LogoUC.OneBrushBorder>
+                            <LinearGradientBrush StartPoint="0,1" EndPoint="0,0">
+                                <GradientStop Offset="0" Color="#FF2BC8FF" />
+                                <GradientStop Offset="1" Color="#FF74EEFF" />
+                            </LinearGradientBrush>
+                        </local:LogoUC.OneBrushBorder>
+                    </local:LogoUC>
+
+                    <local:LogoUC Margin="5">
+                        <local:LogoUC.FolderBackBrush>
+                            <RadialGradientBrush Center="0.6,0.0" ColorInterpolationMode="SRgbLinearInterpolation" GradientOrigin=".4,.518" RadiusX="2" RadiusY="1">
+
+                                <!--<GradientStop Offset="0" Color="#ffffff"/>
+                            <GradientStop Offset="1" Color="#000000"/>-->
+                                <!--<GradientStop Offset="0" Color="#FF58CFFF"/>-->
+                                <GradientStop Offset="0.1" Color="#2daee3" />
+                                <GradientStop Offset="1" Color="#0e58a3" />
+                            </RadialGradientBrush>
+                        </local:LogoUC.FolderBackBrush>
+                        <local:LogoUC.OneBrush>
+                            <RadialGradientBrush Center=".4,.7" GradientOrigin=".6,.37" RadiusX=".9" RadiusY=".9">
+
+                                <GradientStop Offset="0" Color="#4ae9ff" />
+                                <GradientStop Offset="1" Color="#FF40BDF3" />
+                                <!--<GradientStop Offset="0" Color="#ffffff"/>
+                            <GradientStop Offset="1" Color="#000000"/>-->
+                            </RadialGradientBrush>
+
+                        </local:LogoUC.OneBrush>
+                    </local:LogoUC>
+
+                    <local:LogoUC Margin="5">
+                        <local:LogoUC.FolderBackBrush>
+                            <RadialGradientBrush Center=".5,.15" GradientOrigin="0,0" RadiusX="1.8" RadiusY=".9">
+
+                                <GradientStop Offset="0" Color="#30b3e5" />
+                                <GradientStop Offset="0.5" Color="#1f84c0" />
+                                <GradientStop Offset="1" Color="#10579d" />
+                                <!--<GradientStop Offset="0" Color="#ffffff"/>
+                            <GradientStop Offset="1" Color="#000000"/>-->
+                            </RadialGradientBrush>
+                        </local:LogoUC.FolderBackBrush>
+                        <local:LogoUC.OneBrush>
+                            <RadialGradientBrush GradientOrigin=".9,0" RadiusX=".9" RadiusY=".9">
+
+                                <GradientStop Offset="0" Color="#FF5DCAFF" />
+                                <GradientStop Offset="1" Color="#FF61E5FF" />
+                                <!--<GradientStop Offset="0" Color="#ffffff"/>
+                            <GradientStop Offset="1" Color="#000000"/>-->
+                            </RadialGradientBrush>
+                        </local:LogoUC.OneBrush>
+                    </local:LogoUC>
+                    <local:LogoUC Margin="5">
+                        <local:LogoUC.FolderBackBrush>
+                            <RadialGradientBrush Center=".5,.15" GradientOrigin="0,0" RadiusX="1.5" RadiusY=".9">
+
+                                <GradientStop Offset="0" Color="#2daee3" />
+                                <GradientStop Offset="1" Color="#0e58a3" />
+                                <!--<GradientStop Offset="0" Color="#ffffff"/>
+                            <GradientStop Offset="1" Color="#000000"/>-->
+
+                            </RadialGradientBrush>
+                        </local:LogoUC.FolderBackBrush>
+                        <local:LogoUC.OneBrush>
+                            <RadialGradientBrush Center=".4,.7" GradientOrigin=".6,.37" RadiusX=".9" RadiusY=".9">
+
+                                <GradientStop Offset="0" Color="#4ae9ff" />
+                                <GradientStop Offset="1" Color="#FF40BDF3" />
+                                <!--<GradientStop Offset="0" Color="#ffffff"/>
+                            <GradientStop Offset="1" Color="#000000"/>-->
+
+                            </RadialGradientBrush>
+
+                        </local:LogoUC.OneBrush>
+                    </local:LogoUC>
+
+                    <local:LogoUC Margin="5" ShadowStength="0">
+                        <local:LogoUC.FolderBackBrush>
+                            <LinearGradientBrush StartPoint="0,0" EndPoint=".5,1">
+                                <GradientStop Offset="0" Color="#2daee3" />
+                                <!--<GradientStop Offset="0.2" Color="#74b0e3"/>
+                        <GradientStop Offset="0.8" Color="#3e5ba5"/>-->
+
+                                <GradientStop Offset="1" Color="#1468ad" />
+                            </LinearGradientBrush>
+                        </local:LogoUC.FolderBackBrush>
+                        <local:LogoUC.OneBrush>
+                            <LinearGradientBrush StartPoint=".02,0" EndPoint="0,.7">
+                                <GradientStop Offset="1" Color="#60cdee" />
+                                <GradientStop Offset="0" Color="#9cecfc" />
+                            </LinearGradientBrush>
+                        </local:LogoUC.OneBrush>
+
+                        <local:LogoUC.OneBrushBorder>
+                            <LinearGradientBrush StartPoint="1,1" EndPoint="0,0">
+                                <GradientStop Offset="0" Color="#FF4EC4F4" />
+                                <GradientStop Offset="1" Color="#47c1ff" />
+                            </LinearGradientBrush>
+                        </local:LogoUC.OneBrushBorder>
+                    </local:LogoUC>
+
+                    <!--<local:LogoUC Margin="5" >
+                    <local:LogoUC.FolderBackBrush>
+                        <LinearGradientBrush StartPoint=".8,0" EndPoint="1,1">
+                            <GradientStop Offset="0" Color="#4DA1D5"/>
+                            <GradientStop Offset="1" Color="#165bac"/>
+                        </LinearGradientBrush>
+                    </local:LogoUC.FolderBackBrush>
+                    <local:LogoUC.OneBrush>
+                        <LinearGradientBrush StartPoint="1,0" EndPoint=".95,1">
+                            <GradientStop Offset="0" Color="#A8DEFF"/>
+                            <GradientStop Offset="1" Color="#48afe4"/>
+                        </LinearGradientBrush>
+                    </local:LogoUC.OneBrush>
+                </local:LogoUC>-->
+
+                    <local:LogoUC Margin="5">
+                        <local:LogoUC.FolderBackBrush>
+                            <LinearGradientBrush StartPoint=".8,0" EndPoint="1,1">
+                                <GradientStop Offset="0" Color="#2daee3" />
+                                <GradientStop Offset="1" Color="#0e58a3" />
+                            </LinearGradientBrush>
+                        </local:LogoUC.FolderBackBrush>
+                        <local:LogoUC.OneBrush>
+                            <LinearGradientBrush StartPoint="1,0" EndPoint=".95,.5">
+                                <GradientStop Offset="0" Color="#FF5ACDFF" />
+                                <GradientStop Offset="1" Color="#4ae9ff" />
+                            </LinearGradientBrush>
+                        </local:LogoUC.OneBrush>
+                        <local:LogoUC.OneBrushBorder>
+                            <LinearGradientBrush StartPoint="1,1" EndPoint="0,0">
+
+                                <GradientStop Offset="1" Color="#FF5DD3FF" />
+                                <GradientStop Offset="0" Color="#FF39B4F4" />
+                            </LinearGradientBrush>
+
+                        </local:LogoUC.OneBrushBorder>
+                    </local:LogoUC>
+                    <local:LogoUC Margin="5">
+                        <local:LogoUC.FolderBackBrush>
+                            <RadialGradientBrush Center=".5,.15" GradientOrigin="0,0" RadiusX="1.8" RadiusY=".9">
+
+                                <GradientStop Offset="0" Color="#FF58CFFF" />
+                                <GradientStop Offset="0.5" Color="#FF0095D2" />
+                                <GradientStop Offset="1" Color="#0e58a3" />
+                                <!--<GradientStop Offset="0" Color="#ffffff"/>
+                            <GradientStop Offset="1" Color="#000000"/>-->
+                            </RadialGradientBrush>
+                        </local:LogoUC.FolderBackBrush>
+                        <local:LogoUC.OneBrush>
+                            <RadialGradientBrush Center=".4,.7" GradientOrigin=".6,.37" RadiusX=".9" RadiusY=".9">
+
+                                <GradientStop Offset="0" Color="#4ae9ff" />
+                                <GradientStop Offset="1" Color="#FF40BDF3" />
+                                <!--<GradientStop Offset="0" Color="#ffffff"/>
+                            <GradientStop Offset="1" Color="#000000"/>-->
+                            </RadialGradientBrush>
+
+                        </local:LogoUC.OneBrush>
+                    </local:LogoUC>
+
+                    <local:LogoUC Margin="5" ShadowStength="2">
+                        <local:LogoUC.FolderBackBrush>
+                            <RadialGradientBrush Center=".5,.15" GradientOrigin="0,0" RadiusX="1.8" RadiusY=".9">
+
+                                <GradientStop Offset="0" Color="#FF0D8DDB" />
+                                <!--<GradientStop Offset="0.5" Color="#2daee3"/>-->
+                                <GradientStop Offset="1" Color="#FF029CD5" />
+                                <!--<GradientStop Offset="0" Color="#ffffff"/>
+                            <GradientStop Offset="1" Color="#000000"/>-->
+                            </RadialGradientBrush>
+                        </local:LogoUC.FolderBackBrush>
+                        <local:LogoUC.OneBrush>
+                            <RadialGradientBrush Center=".4,.7" GradientOrigin=".6,.37" RadiusX=".9" RadiusY=".9">
+
+                                <GradientStop Offset="0" Color="#FFB0FCFF" />
+                                <GradientStop Offset="1" Color="#47c1ff" />
+                                <!--<GradientStop Offset="0" Color="#ffffff"/>
+                            <GradientStop Offset="1" Color="#000000"/>-->
+                            </RadialGradientBrush>
+
+                        </local:LogoUC.OneBrush>
+                    </local:LogoUC>
+
+                    <local:LogoUC Margin="5" ShadowStength="2">
+                        <local:LogoUC.FolderBackBrush>
+                            <RadialGradientBrush Center=".5,.15" GradientOrigin="0,0" RadiusX="1.8" RadiusY=".9">
+
+                                <GradientStop Offset="0" Color="#FF0D8DDB" />
+                                <GradientStop Offset=".7" Color="#FF029CD5" />
+                                <GradientStop Offset="1" Color="#FF0586BF" />
+                                <!--<GradientStop Offset="0" Color="#ffffff"/>
+                            <GradientStop Offset="1" Color="#000000"/>-->
+                            </RadialGradientBrush>
+                        </local:LogoUC.FolderBackBrush>
+                        <local:LogoUC.OneBrush>
+                            <RadialGradientBrush Center=".4,.7" GradientOrigin=".6,.37" RadiusX=".9" RadiusY=".9">
+
+                                <GradientStop Offset="0" Color="#FFB0FCFF" />
+                                <GradientStop Offset="1" Color="#47c1ff" />
+                                <!--<GradientStop Offset="0" Color="#ffffff"/>
+                            <GradientStop Offset="1" Color="#000000"/>-->
+                            </RadialGradientBrush>
+
+                        </local:LogoUC.OneBrush>
+                        <local:LogoUC.OneBrushBorder>
+                            <LinearGradientBrush StartPoint="1,1" EndPoint="0,0">
+                                <GradientStop Offset="1" Color="#FFB0FCFF" />
+                                <GradientStop Offset="0" Color="#47c1ff" />
+                            </LinearGradientBrush>
+                        </local:LogoUC.OneBrushBorder>
+                    </local:LogoUC>
+
+                    <local:LogoUC Margin="5" Visibility="Collapsed">
+                        <local:LogoUC.FolderBackBrush>
+                            <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+
+                                <GradientStop Offset="0" Color="#ffffff" />
+                                <GradientStop Offset="1" Color="#e0edf8" />
+                                <!--<GradientStop Offset="0" Color="#ffffff"/>
+                            <GradientStop Offset="1" Color="#000000"/>-->
+                            </LinearGradientBrush>
+                        </local:LogoUC.FolderBackBrush>
+                        <local:LogoUC.OneBrush>
+                            <RadialGradientBrush Center=".4,.7" GradientOrigin=".6,.37" RadiusX=".9" RadiusY=".9">
+
+                                <GradientStop Offset="0" Color="#FF58CFFF" />
+                                <GradientStop Offset="1" Color="#2daee3" />
+                                <!--<GradientStop Offset="0" Color="#ffffff"/>
+                            <GradientStop Offset="1" Color="#000000"/>-->
+                            </RadialGradientBrush>
+
+                        </local:LogoUC.OneBrush>
+                    </local:LogoUC>
+                </WrapPanel>
+            </StackPanel>
+        </ScrollViewer>
+
+
+
+        <!--</Viewbox>-->
+        <Canvas
+            Width="32"
+            Height="32"
+            Visibility="Collapsed">
+            <Canvas.Clip>
+
+                <PathGeometry>
+                    <PathGeometry.Figures>
+
+                        <PathFigure IsClosed="True" StartPoint="4,0">
+                            <LineSegment Point="28,0" />
+                            <ArcSegment
+                                Point="32,4"
+                                Size="4 4"
+                                SweepDirection="Clockwise" />
+                            <LineSegment Point="32,32" />
+                            <LineSegment Point="4,32" />
+                            <ArcSegment
+                                Point="0,28"
+                                Size="4 4"
+                                SweepDirection="Clockwise" />
+                            <LineSegment Point="0,4" />
+                            <ArcSegment
+                                Point="4,0"
+                                Size="4 4"
+                                SweepDirection="Clockwise" />
+                        </PathFigure>
+                    </PathGeometry.Figures>
+                </PathGeometry>
+            </Canvas.Clip>
+
+
+            <!--  back  -->
+            <Rectangle
+                Width="32"
+                Height="32"
+                Visibility="Collapsed">
+                <Rectangle.Fill>
+                    <LinearGradientBrush StartPoint="0,1" EndPoint="0,0">
+                        <GradientStop Offset="0" Color="#2cb5eb" />
+                        <GradientStop Offset="1" Color="#3ed6f8" />
+                    </LinearGradientBrush>
+
+                </Rectangle.Fill>
+            </Rectangle>
+
+            <!--  1 with stroke  -->
+            <Path StrokeThickness="1">
+
+                <Path.Data>
+                    <PathGeometry>
+                        <PathGeometry.Figures>
+
+                            <PathFigure
+                                x:Name="fig"
+                                IsClosed="True"
+                                StartPoint="4,0">
+                                <LineSegment Point="28,0" />
+                                <ArcSegment
+                                    Point="32,4"
+                                    Size="4 4"
+                                    SweepDirection="Clockwise" />
+                                <LineSegment Point="32,32" />
+                                <LineSegment Point="4,32" />
+                            </PathFigure>
+                        </PathGeometry.Figures>
+                    </PathGeometry>
+                </Path.Data>
+                <Path.Fill>
+                    <LinearGradientBrush x:Name="lgb" StartPoint="1,0" EndPoint=".8,1">
+                        <GradientStop x:Name="GradientStop1" Offset="0" Color="#2cb5eb" />
+                        <GradientStop x:Name="GradientStop2" Offset="1" Color="#3ed6f8" />
+                        <!--<GradientStop Offset=".96" Color="#ff0000"/>
+                            <GradientStop Offset="1" Color="#000000"/>-->
+                    </LinearGradientBrush>
+                </Path.Fill>
+                <Path.Stroke>
+                    <!--<LinearGradientBrush StartPoint="0,1" EndPoint="0,0">
+                        <GradientStop Offset="0" Color="#2cb5eb"/>
+                        <GradientStop Offset="1" Color="#3ed6f8"/>
+                    </LinearGradientBrush>-->
+                    <LinearGradientBrush StartPoint="1,1" EndPoint=".6,0">
+                        <GradientStop Offset="0" Color="#2cb5eb" />
+                        <GradientStop Offset="1" Color="#3ed6f8" />
+
+                    </LinearGradientBrush>
+                </Path.Stroke>
+                <Path.Triggers>
+                    <EventTrigger RoutedEvent="Loaded">
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <!--<PointAnimation
+                                <DoubleAnimation
+                Storyboard.TargetName="GradientStop1"
+                Storyboard.TargetProperty="Offset"
+                From="0.0" To="1.0" Duration="0:0:1.5"
+                AutoReverse="True" />-->
+                                <PointAnimationUsingPath
+                                    AccelerationRatio=".7"
+                                    AutoReverse="True"
+                                    DecelerationRatio=".3"
+                                    RepeatBehavior="Forever"
+                                    Storyboard.TargetName="lgb"
+                                    Storyboard.TargetProperty="EndPoint"
+                                    Duration="0:0:1">
+                                    <!--    -->
+                                    <PointAnimationUsingPath.PathGeometry>
+
+                                        <PathGeometry Figures="M .6,0 A 1,1 90 0 0 .6,1" />
+                                        <!--
+                                            Figures="M 1.5,.3 A .66,.66 0 1 0 1.5,.31
+                                            
+                                            M .6,0 A 1,1 90 0 0 .6,1"PresentationOptions:Freeze="True" Figures="M 0,0 A 1,1 90 1 1 0,.01"
+                                        -->
+                                        <!--  Figures="M 0,0 1,0 1,1 0,1 0,0"  -->
+                                    </PointAnimationUsingPath.PathGeometry>
+                                    <!--<PointAnimationUsingPath.PathGeometry>
+
+                                        <PathGeometry
+                    Figures="M 10,100 C 35,0 135,0 160,100 180,190 285,200 310,100"
+                     />-->
+                                    <!--  PresentationOptions:Freeze="True"  -->
+                                    <!--
+                                    </PointAnimationUsingPath.PathGeometry>-->
+                                </PointAnimationUsingPath>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                </Path.Triggers>
+            </Path>
+
+            <!--  NO 1 with offset  -->
+            <Path StrokeThickness="1" Visibility="Collapsed">
+
+                <Path.Data>
+                    <PathGeometry>
+                        <PathGeometry.Figures>
+                            <PathFigure IsClosed="True" StartPoint="4,1">
+                                <LineSegment Point="28,1" />
+                                <ArcSegment
+                                    Point="31,5"
+                                    Size="4 4"
+                                    SweepDirection="Clockwise" />
+                                <LineSegment Point="31,31" />
+                                <LineSegment Point="4,31" />
+                            </PathFigure>
+                        </PathGeometry.Figures>
+                    </PathGeometry>
+                </Path.Data>
+                <Path.Fill>
+                    <LinearGradientBrush StartPoint="1,0" EndPoint=".8,1">
+                        <GradientStop Offset="0" Color="#2cb5eb" />
+                        <GradientStop Offset="1" Color="#3ed6f8" />
+                    </LinearGradientBrush>
+
+                </Path.Fill>
+            </Path>
+
+            <!--  folder Visibility="Collapsed"  -->
+            <Path ClipToBounds="False">
+
+                <Path.Fill>
+                    <LinearGradientBrush StartPoint="0.4,0" EndPoint=".9,1">
+                        <GradientStop Offset="0" Color="#2fafe3" />
+                        <GradientStop Offset=".6" Color="#2083c0" />
+                        <GradientStop Offset="1" Color="#11599f" />
+                    </LinearGradientBrush>
+
+                </Path.Fill>
+                <Path.Data>
+                    <PathGeometry>
+                        <PathGeometry.Figures>
+                            <PathFigure IsClosed="False" StartPoint="4,0">
+                                <LineSegment Point="20,0" />
+                                <LineSegment Point="20,6" />
+                                <ArcSegment Point="22,8" Size="2 2" />
+                                <LineSegment Point="23,8" />
+                                <ArcSegment
+                                    Point="25,10"
+                                    Size="2 2"
+                                    SweepDirection="Clockwise" />
+                                <LineSegment Point="25,32" />
+                                <LineSegment Point="4,32" />
+                                <ArcSegment
+                                    Point="0,28"
+                                    Size="4 4"
+                                    SweepDirection="Clockwise" />
+                                <LineSegment Point="0,4" />
+                                <ArcSegment
+                                    Point="4,0"
+                                    Size="4 4"
+                                    SweepDirection="Clockwise" />
+
+
+                            </PathFigure>
+                        </PathGeometry.Figures>
+                    </PathGeometry>
+                </Path.Data>
+                <Path.Effect>
+                    <DropShadowEffect
+                        BlurRadius="2"
+                        Direction="0"
+                        Opacity="0.5"
+                        ShadowDepth="1" />
+                </Path.Effect>
+            </Path>
+
+            <TextBlock
+                Margin="3,8"
+                FontSize="10"
+                Foreground="White"
+                Text="one" />
+
+        </Canvas>
+
+    </Grid>
+</Window>
