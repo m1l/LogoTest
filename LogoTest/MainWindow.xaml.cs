@@ -11,10 +11,12 @@ using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
+using System.Windows.Markup;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Xml;
 
 namespace LogoTest
 {
@@ -32,6 +34,77 @@ namespace LogoTest
                 ((LogoUC)item).ToolTip = i;
                 i++;
             }
+            CreateLogos(v1);
+            CreateLogos(v2);
+            CreateLogos(v3a);
+            CreateLogos(v3);
+            CreateLogos(v4); 
+            CreateLogos(v5);
+        }
+        private LogoUC MakeACopy(LogoUC logo)
+        {
+            string saved = XamlWriter.Save(logo);
+            StringReader sReader = new StringReader(saved);
+            XmlReader xReader = XmlReader.Create(sReader);
+            LogoUC newCanvas = (LogoUC)XamlReader.Load(xReader);
+            return newCanvas;
+        }
+        private void CreateLogos(LogoUC logo)
+        {
+            return;
+
+            StackPanel sp = new StackPanel();
+            sp.Orientation = Orientation.Horizontal;
+
+                      
+            //ScaleTransform scaleTransform3 = new ScaleTransform(4, 4, .5, 0.5);
+            //l64.RenderTransform = scaleTransform3;
+            ////l64.Width = 64;
+            ////l64.Height = 64;
+            //l64.Margin = new Thickness(0);
+            logo.ShadowStength = 1;
+            var l64 = MakeACopy(logo);
+            Viewbox vb64 = new Viewbox();
+            vb64.Width = 64;
+            vb64.Height = 64;
+            vb64.Child = l64;
+            sp.Children.Add(vb64);
+
+            
+            
+            Viewbox vb128 = new Viewbox();
+            vb128.Width = 128;
+            vb128.Height = 128;
+            
+            //ScaleTransform scaleTransform3 = new ScaleTransform(4, 4, .5, 0.5);
+            //l128.RenderTransform = scaleTransform3;
+            ////l128.Width = 128;
+            ////l128.Height = 128;
+            //l128.Margin = new Thickness(0);
+            logo.ShadowStength = 4;
+            var l128 = MakeACopy(logo);
+            vb128.Child = l128;
+            sp.Children.Add(vb128);
+
+            ScaleTransform scaleTransform1 = new ScaleTransform(1, 1, 0, 0);
+            logo.RenderTransform = scaleTransform1;
+            logo.Width = 32;
+            logo.Height = 32;
+            logo.Margin = new Thickness(0);
+            logo.ShadowStength = 0;
+            var l32 = MakeACopy(logo);
+            sp.Children.Insert(1, l32);
+
+            scaleTransform1 = new ScaleTransform(.5, .5, 0, 0);
+            logo.RenderTransform = scaleTransform1;
+            logo.Width = 16;
+            logo.Height = 16;
+            logo.Margin = new Thickness(0, 0, 8, 0);
+            logo.ShadowStength = 0;
+            var l16 = MakeACopy(logo);
+            sp.Children.Insert(0, l16);
+
+            SelSP.Children.Add(sp);
         }
 
 

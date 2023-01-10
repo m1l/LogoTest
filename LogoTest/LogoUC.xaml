@@ -12,7 +12,8 @@
 
 
 
-    <Canvas Width="32" Height="32">
+    <Canvas Width="32" Height="32" RenderTransformOrigin=".5,.5">
+       
         <Canvas.Clip>
             <PathGeometry>
                 <PathGeometry.Figures>
