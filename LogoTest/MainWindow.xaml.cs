@@ -160,12 +160,14 @@ namespace LogoTest
 
         private void Size128_Click(object sender, RoutedEventArgs e)
         {
+            double size;
+            size = Double.Parse(((Button)sender).Content.ToString());
             foreach (var item in wpanel.Children)
             {
-                ScaleTransform scaleTransform1 = new ScaleTransform(4, 4, 64, 64);
+                ScaleTransform scaleTransform1 = new ScaleTransform(size/32, size/32, size / 32/2, size / 32/2);
                 ((LogoUC)item).RenderTransform = scaleTransform1;
-                ((LogoUC)item).Width = 128;
-                ((LogoUC)item).Height = 128;
+                ((LogoUC)item).Width = size;
+                ((LogoUC)item).Height = size;
             }
         }
 

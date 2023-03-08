@@ -21,11 +21,16 @@
                         <LineSegment Point="20,0" />
                         <LineSegment Point="20,6" />
                         <ArcSegment Point="22,8" Size="2 2" />
+                        <ArcSegment
+                                Point="25,11"
+                                Size="3 3"
+                                SweepDirection="Clockwise" />
+                        <!--<ArcSegment Point="22,8" Size="2 2" />
                         <LineSegment Point="23,8" />
                         <ArcSegment
                                 Point="25,10"
                                 Size="2 2"
-                                SweepDirection="Clockwise" />
+                                SweepDirection="Clockwise" />-->
                         <LineSegment Point="25,32" />
                         <LineSegment Point="6,32" />
                         <ArcSegment
@@ -67,7 +72,7 @@
             </PathGeometry>
         </Canvas.Clip>
 
-        
+        <!--  1 -->
         <Path
             Fill="{Binding ElementName=this, Path=OneBrush, FallbackValue=LightBlue}"
             Stroke="{Binding ElementName=this, Path=OneBrushBorder, FallbackValue=LightBlue}"
@@ -91,6 +96,7 @@
                     </PathGeometry.Figures>
                 </PathGeometry>
             </Path.Data>
+           
         </Path>
 
         <!--  NO 1 with offset  -->
@@ -119,7 +125,7 @@
         <Path
             ClipToBounds="False"
             Fill="{Binding ElementName=this, Path=FolderBackBrush, FallbackValue=darkblue}"
-            StrokeThickness="1">
+            StrokeThickness="1"> 
             <Path.Data>
                 <PathGeometry>
                     <PathGeometry.Figures>
@@ -170,24 +176,31 @@
             <Path.Effect>
                 <DropShadowEffect
                     BlurRadius="{Binding ElementName=this, Path=ShadowStength}"
-                    Direction="0"
-                    Opacity=".8"
+                    Direction="30"
+                    Opacity=".55"
                     RenderingBias="Quality"
-                    ShadowDepth="0"
-                    Color="#185eae" />
+                    ShadowDepth="1"
+                    Color="#256fa2"/>
+                <!--<DropShadowEffect
+                    BlurRadius="{Binding ElementName=this, Path=ShadowStength}"
+                    Direction="0"
+                    Opacity=".5"
+                    RenderingBias="Quality"
+                    ShadowDepth="1"
+                    Color="#185eae" />-->
             </Path.Effect>
         </Path>
 
-        <!--  Line around folder  -->
+        <!--  Blur Line around folder  -->
         <Path
             ClipToBounds="False"
             Stroke="#99000000"
             StrokeThickness="5"
             Opacity=".1"
             Data="{StaticResource FolderPathGeo}"
-            Clip="{StaticResource FolderPathGeo}"
+            
             Visibility="Collapsed"
-            ><!--  -->
+            ><!-- Clip="{StaticResource FolderPathGeo}" -->
             
             <Path.Effect>
                 <BlurEffect
@@ -198,38 +211,33 @@
             </Path.Effect>
         </Path>
 
+        <!-- edge border -->
         <Path
             ClipToBounds="False"
-            Stroke="#99000000"
+            Stroke="#1b61a6"
             StrokeThickness="1"
-            Opacity=".05"
-            
-            Clip="{StaticResource FolderPathGeo}"
-           
-            >
+            Opacity=".11"
+           Clip="{StaticResource FolderPathGeo}"
+            ><!---->
             <Path.Data>
                 <PathGeometry>
                     <PathGeometry.Figures>
                         <PathFigure IsClosed="False" StartPoint="20,0">
                             <LineSegment Point="20,0" />
                             <LineSegment Point="20,6" />
-                            <ArcSegment Point="22,8" Size="2 2" />
+                            <!--<ArcSegment Point="22,8" Size="2 2" />
                             <LineSegment Point="23,8" />
                             <ArcSegment
                                 Point="25,10"
                                 Size="2 2"
+                                SweepDirection="Clockwise" />-->
+                            <ArcSegment Point="22,8" Size="2 2" />
+                            <ArcSegment
+                                Point="25,11"
+                                Size="3 3"
                                 SweepDirection="Clockwise" />
                             <LineSegment Point="25,32" />
-                            <!--<LineSegment Point="6,32" />
-                            <ArcSegment
-                                Point="0,26"
-                                Size="6 6"
-                                SweepDirection="Clockwise" />-->
-                            <!--<LineSegment Point="0,6" />
-                            <ArcSegment
-                                Point="6,0"
-                                Size="6 6"
-                                SweepDirection="Clockwise" />-->
+                          
                         </PathFigure>
                     </PathGeometry.Figures>
                 </PathGeometry>
@@ -255,7 +263,7 @@
         
         <!--TEXT one-->
         <Path
-            Margin="3,16"
+            Margin="3.5,16"
             Opacity="1"
             Stroke="White"
             StrokeThickness=".6">
@@ -281,7 +289,7 @@
         </Path>
        
         <Path
-            Margin="9.75,16"
+            Margin="10.25,16"
             Opacity="1"
             Stroke="White"
             StrokeThickness=".6">
@@ -303,7 +311,7 @@
         </Path>
 
         <Path
-            Margin="16.4,16"
+            Margin="17.0,16"
             Opacity="1"
             Stroke="White"
             StrokeLineJoin="Miter"
@@ -325,7 +333,7 @@
                                 SweepDirection="Counterclockwise" />
                             <ArcSegment
                                 IsLargeArc="False"
-                                Point="4.3,2.2"
+                                Point="4.4,2.02"
                                 Size="3,2.5"
                                 SweepDirection="Counterclockwise" />
                         </PathFigure>
