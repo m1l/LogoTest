@@ -12,7 +12,35 @@
 
 
 
-    <Canvas Width="32" Height="32" RenderTransformOrigin=".5,.5">
+    <Canvas Width="32" Height="32" RenderTransformOrigin=".5,.5"
+            >
+        <Canvas.Resources>
+            <PathGeometry x:Key="FolderPathGeo">
+                <PathGeometry.Figures>
+                    <PathFigure IsClosed="False" StartPoint="6,0">
+                        <LineSegment Point="20,0" />
+                        <LineSegment Point="20,6" />
+                        <ArcSegment Point="22,8" Size="2 2" />
+                        <LineSegment Point="23,8" />
+                        <ArcSegment
+                                Point="25,10"
+                                Size="2 2"
+                                SweepDirection="Clockwise" />
+                        <LineSegment Point="25,32" />
+                        <LineSegment Point="6,32" />
+                        <ArcSegment
+                                Point="0,26"
+                                Size="6 6"
+                                SweepDirection="Clockwise" />
+                        <LineSegment Point="0,6" />
+                        <ArcSegment
+                                Point="6,0"
+                                Size="6 6"
+                                SweepDirection="Clockwise" />
+                    </PathFigure>
+                </PathGeometry.Figures>
+            </PathGeometry>
+        </Canvas.Resources>
        
         <Canvas.Clip>
             <PathGeometry>
@@ -39,6 +67,7 @@
             </PathGeometry>
         </Canvas.Clip>
 
+        
         <Path
             Fill="{Binding ElementName=this, Path=OneBrush, FallbackValue=LightBlue}"
             Stroke="{Binding ElementName=this, Path=OneBrushBorder, FallbackValue=LightBlue}"
@@ -94,7 +123,7 @@
             <Path.Data>
                 <PathGeometry>
                     <PathGeometry.Figures>
-                        <PathFigure IsClosed="False" StartPoint="6,0">
+                        <!--<PathFigure IsClosed="False" StartPoint="6,0">
                             <LineSegment Point="20,0" />
                             <LineSegment Point="20,6" />
                             <ArcSegment Point="22,8" Size="2 2" />
@@ -113,6 +142,27 @@
                                 Point="6,0"
                                 Size="6 6"
                                 SweepDirection="Clockwise" />
+                        </PathFigure>-->
+                        <!-- offset beyond to fix shadow -->
+                        <PathFigure IsClosed="False" StartPoint="6,-4">
+                            <LineSegment Point="20,-4" />
+                            <LineSegment Point="20,6" />
+                            <ArcSegment Point="22,8" Size="2 2" />
+                            <ArcSegment
+                                Point="25,11"
+                                Size="3 3"
+                                SweepDirection="Clockwise" />
+                            <LineSegment Point="25,36" />
+                            <LineSegment Point="0,36" />
+                            <!--<ArcSegment
+                                Point="0,26"
+                                Size="6 6"
+                                SweepDirection="Clockwise" />-->
+                            <LineSegment Point="0,-4" />
+                            <!--<ArcSegment
+                                Point="6,0"
+                                Size="6 6"
+                                SweepDirection="Clockwise" />-->
                         </PathFigure>
                     </PathGeometry.Figures>
                 </PathGeometry>
@@ -132,12 +182,35 @@
         <Path
             ClipToBounds="False"
             Stroke="#99000000"
+            StrokeThickness="5"
+            Opacity=".1"
+            Data="{StaticResource FolderPathGeo}"
+            Clip="{StaticResource FolderPathGeo}"
+            Visibility="Collapsed"
+            ><!--  -->
+            
+            <Path.Effect>
+                <BlurEffect
+                    KernelType="Gaussian"
+                    Radius="8"
+                    RenderingBias="Quality" />
+
+            </Path.Effect>
+        </Path>
+
+        <Path
+            ClipToBounds="False"
+            Stroke="#99000000"
             StrokeThickness="1"
-            Visibility="Collapsed">
+            Opacity=".05"
+            
+            Clip="{StaticResource FolderPathGeo}"
+           
+            >
             <Path.Data>
                 <PathGeometry>
                     <PathGeometry.Figures>
-                        <PathFigure IsClosed="False" StartPoint="6,0">
+                        <PathFigure IsClosed="False" StartPoint="20,0">
                             <LineSegment Point="20,0" />
                             <LineSegment Point="20,6" />
                             <ArcSegment Point="22,8" Size="2 2" />
@@ -147,27 +220,29 @@
                                 Size="2 2"
                                 SweepDirection="Clockwise" />
                             <LineSegment Point="25,32" />
-                            <LineSegment Point="6,32" />
+                            <!--<LineSegment Point="6,32" />
                             <ArcSegment
                                 Point="0,26"
                                 Size="6 6"
-                                SweepDirection="Clockwise" />
-                            <LineSegment Point="0,6" />
+                                SweepDirection="Clockwise" />-->
+                            <!--<LineSegment Point="0,6" />
                             <ArcSegment
                                 Point="6,0"
                                 Size="6 6"
-                                SweepDirection="Clockwise" />
+                                SweepDirection="Clockwise" />-->
                         </PathFigure>
                     </PathGeometry.Figures>
                 </PathGeometry>
             </Path.Data>
-            <Path.Effect>
+            <!--  -->
+
+            <!--<Path.Effect>
                 <BlurEffect
                     KernelType="Gaussian"
-                    Radius="{Binding ElementName=this, Path=ShadowStength}"
+                    Radius="8"
                     RenderingBias="Quality" />
 
-            </Path.Effect>
+            </Path.Effect>-->
         </Path>
 
         <!--<TextBlock
@@ -180,7 +255,7 @@
         
         <!--TEXT one-->
         <Path
-            Margin="4,16"
+            Margin="3,16"
             Opacity="1"
             Stroke="White"
             StrokeThickness=".6">
@@ -204,8 +279,9 @@
                 </PathGeometry>
             </Path.Data>
         </Path>
+       
         <Path
-            Margin="10.5,16"
+            Margin="9.75,16"
             Opacity="1"
             Stroke="White"
             StrokeThickness=".6">
@@ -227,7 +303,7 @@
         </Path>
 
         <Path
-            Margin="17,16"
+            Margin="16.4,16"
             Opacity="1"
             Stroke="White"
             StrokeLineJoin="Miter"
@@ -258,5 +334,8 @@
                 </PathGeometry>
             </Path.Data>
         </Path>
+
+
+        <!--<Image Source="Work_OC_Logo_08_Final-1.png" Width="30" Height="32" Stretch="Uniform" Opacity=".5" Margin=".3"/>-->
     </Canvas>
 </UserControl>

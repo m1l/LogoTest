@@ -34,12 +34,12 @@ namespace LogoTest
                 ((LogoUC)item).ToolTip = i;
                 i++;
             }
-            CreateLogos(v1);
-            CreateLogos(v2);
-            CreateLogos(v3a);
-            CreateLogos(v3);
-            CreateLogos(v4); 
-            CreateLogos(v5);
+            //CreateLogos(v1);
+            //CreateLogos(v2);
+            //CreateLogos(v3a);
+            //CreateLogos(v3);
+            //CreateLogos(v4); 
+            //CreateLogos(v5);
         }
         private LogoUC MakeACopy(LogoUC logo)
         {
