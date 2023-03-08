@@ -519,7 +519,8 @@
                         OneBorderThickness="{Binding ElementName=BorderSlider, Path=Value}"
                         ShadowStength="{Binding ElementName=ShadowSlider, Path=Value}">
                         <local:LogoUC.FolderBackBrush>
-                            <RadialGradientBrush Center="0.6,0.0" ColorInterpolationMode="SRgbLinearInterpolation" GradientOrigin=".4,.518" RadiusX="2" RadiusY="1">
+                            <RadialGradientBrush Center="0.6,0.0" ColorInterpolationMode="SRgbLinearInterpolation" 
+                                                 GradientOrigin=".4,.518" RadiusX="2" RadiusY="1">
 
                                 <!--<GradientStop Offset="0" Color="#ffffff"/>
                             <GradientStop Offset="1" Color="#000000"/>-->
@@ -560,9 +561,10 @@
                         OneBorderThickness="{Binding ElementName=BorderSlider, Path=Value}"
                         ShadowStength="{Binding ElementName=ShadowSlider, Path=Value}">
                         <local:LogoUC.FolderBackBrush>
-                            <RadialGradientBrush Center="0.6,0.0" ColorInterpolationMode="SRgbLinearInterpolation" GradientOrigin=".4,.518" RadiusX="2" RadiusY="1">
+                            <RadialGradientBrush Center="1,0.0" ColorInterpolationMode="SRgbLinearInterpolation" 
+                                                 GradientOrigin=".23,.518" RadiusX="2" RadiusY="1">
 
-                                <!--<GradientStop Offset="0" Color="#ffffff"/>
+                                <!--<GradientStop Offset="0.1" Color="#ffffff"/>
                             <GradientStop Offset="1" Color="#000000"/>-->
                                 <!--<GradientStop Offset="0" Color="#FF58CFFF"/>-->
                                 <GradientStop Offset="0.1" Color="#FF39aae0" />
@@ -575,8 +577,8 @@
                             </RadialGradientBrush>-->
                         </local:LogoUC.FolderBackBrush>
                         <local:LogoUC.OneBrush>
-                            <LinearGradientBrush StartPoint="1,0" EndPoint="0.5,0.8" SpreadMethod="Pad">
-                                <GradientStop Offset="0" Color="#FF5ACDFF" />
+                            <LinearGradientBrush StartPoint="1,0" EndPoint="0.5,0.2" SpreadMethod="Pad">
+                                <GradientStop Offset="0" Color="#57d3ff" />
                                 <GradientStop Offset="1" Color="#4ae9ff" />
                                 <!--<GradientStop Offset="0" Color="#000000" />
                                 <GradientStop Offset="1" Color="#ffffff" />-->
